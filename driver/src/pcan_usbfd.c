@@ -739,7 +739,7 @@ static int pcan_usbfd_decode_canmsg(struct pcan_usb_interface *usb_if,
 	u32 flags = 0;
 	int err;
 
-#if 1//def DEBUG
+#ifdef DEBUG
 	printk(KERN_DEBUG "%s: %s(): "
 		"rx=[flags=0x%02x len=0x%02x ts32=0x%08x id=0x%08x]\n",
 			DEVICE_NAME,__func__, rm->flags, PUCAN_MSG_DLC(rm),
